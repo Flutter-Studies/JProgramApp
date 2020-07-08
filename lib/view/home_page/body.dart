@@ -1,6 +1,10 @@
+
 import 'package:flutter/material.dart';
-import './rounded_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:JprogramApp/view/utils/rounded_button.dart';
+import 'package:JprogramApp/view/login/login.dart';
+
 import './background.dart';
 
 
@@ -27,13 +31,22 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             Image.asset(
               "assets/images/logo.png",
-              height: size.height * 0.30,
+              height: size.height * 0.28,
             ),
             
             SizedBox(height: size.height * 0.05),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
+              },
             ),
             
             RoundedButton(
@@ -44,9 +57,15 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             Icon(
               FontAwesomeIcons.github,
-              size: 50,
-                  
+              size: 50,          
             ),
+
+            SizedBox(height: size.height * 0.02),
+            Text(
+              '2020 \u00a9 JProgram',
+              style: TextStyle(fontSize: 17),
+            )
+
           ],
         ),
       ),

@@ -1,9 +1,6 @@
-import 'package:HomePage/body.dart';
+
 import 'package:flutter/material.dart';
-import './logo.dart';
-import './options_buttons.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import './body.dart';
+import 'package:JprogramApp/view/home_page/body.dart';
 
 main() => runApp(HomePage());
 
