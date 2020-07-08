@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './rounded_button.dart';
-import './constants.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './background.dart';
 
 
@@ -38,8 +38,14 @@ class Body extends StatelessWidget {
             
             RoundedButton(
               text: "SIGN UP",
-              textColor: Colors.black,
               press: () {},
+            ),
+
+            SizedBox(height: size.height * 0.05),
+            Icon(
+              FontAwesomeIcons.github,
+              size: 50,
+                  
             ),
           ],
         ),
