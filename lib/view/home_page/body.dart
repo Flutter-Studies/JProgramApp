@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'package:JprogramApp/view/signup/signup.dart';
 import 'package:JprogramApp/view/utils/rounded_button.dart';
 import 'package:JprogramApp/view/login/login.dart';
 
@@ -23,6 +24,8 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             
+            SizedBox(height: size.height * 0.05),
+
             Text(
               "Welcome to the JProgram App",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -51,7 +54,16 @@ class Body extends StatelessWidget {
             
             RoundedButton(
               text: "SIGN UP",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
             ),
 
             SizedBox(height: size.height * 0.05),

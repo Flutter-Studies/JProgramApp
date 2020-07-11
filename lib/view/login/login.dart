@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:JprogramApp/view/Login/body.dart';
+import 'package:JprogramApp/view/login/components/body.dart';
 
 class LoginScreen extends StatelessWidget {
   
@@ -8,9 +8,11 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      //backgroundColor: Colors.blue[50],
+      
+     backgroundColor: Colors.white,
       //appBar: buildAppBar(),
       body: Body(),
+      
     );
     
   }
@@ -22,7 +24,7 @@ class LoginScreen extends StatelessWidget {
       leading: IconButton(
         icon: Icon(
           Icons.keyboard_backspace,
-          color: Colors.blue[50],
+          color: Colors.black,
         ),
         onPressed: () {},
       ),
