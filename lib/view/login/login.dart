@@ -9,8 +9,8 @@ class LoginScreen extends StatelessWidget {
     
     return Scaffold(
       
-     backgroundColor: Colors.white,
-      //appBar: buildAppBar(),
+      backgroundColor: Colors.white,
+      appBar: buildAppBar(),
       body: Body(),
       
     );
@@ -18,16 +18,37 @@ class LoginScreen extends StatelessWidget {
   }
 
   AppBar buildAppBar() {
+    
     return AppBar(
-      backgroundColor: Colors.white,
+      
+      backgroundColor: Colors.blue[100],
       elevation: 0,
+      
       leading: IconButton(
+        
         icon: Icon(
           Icons.keyboard_backspace,
           color: Colors.black,
         ),
+        
         onPressed: () {},
       ),
+      
+      title: Text("JPROGRAM", ),
+
+      actions: <Widget>[
+        
+        IconButton(
+          icon: Icon(
+            Icons.more_vert,
+            // By default our  icon color is white
+            color: Colors.black,
+          ),
+          onPressed: () {},
+        ),
+
+      ],
+
     );
   }
 

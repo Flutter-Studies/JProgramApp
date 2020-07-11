@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
           
           children: <Widget>[
             
-            SizedBox(height: size.height * 0.03),
+            //SizedBox(height: size.height * 0.03),
             
             Image.asset(
               "assets/images/logo.png",
