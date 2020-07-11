@@ -34,7 +34,8 @@ class LoginScreen extends StatelessWidget {
         onPressed: () {},
       ),
       
-      title: Text("JPROGRAM", ),
+      centerTitle: true,
+      title: Text("JPROGRAM ", textAlign: TextAlign.center),
 
       actions: <Widget>[
         
