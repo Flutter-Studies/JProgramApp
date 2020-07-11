@@ -9,8 +9,24 @@ class LoginScreen extends StatelessWidget {
     
     return Scaffold(
       //backgroundColor: Colors.blue[50],
+      //appBar: buildAppBar(),
       body: Body(),
     );
     
   }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 0,
+      leading: IconButton(
+        icon: Icon(
+          Icons.keyboard_backspace,
+          color: Colors.blue[50],
+        ),
+        onPressed: () {},
+      ),
+    );
+  }
+
 }
