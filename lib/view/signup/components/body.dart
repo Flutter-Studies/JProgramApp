@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:JprogramApp/view/login/login.dart';
 import 'package:JprogramApp/view/signup/components/background.dart';
-import 'package:JprogramApp/view/signup/components/or_divider.dart';
-import 'package:JprogramApp/view/signup/components/social_icon.dart';
+//import 'package:JprogramApp/view/signup/components/or_divider.dart';
+//import 'package:JprogramApp/view/signup/components/social_icon.dart';
 
 import 'package:JprogramApp/view/utils/have_account.dart';
 import 'package:JprogramApp/view/utils/rounded_button.dart';
@@ -29,13 +29,13 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           
           children: <Widget>[
+
+            //SizedBox(height: size.height * 0.03),
             
             Image.asset(
               "assets/images/logo.png",
-              height: size.height * 0.20,
+              height: size.height * 0.25,
             ),
-
-            SizedBox(height: size.height * 0.02),
 
             RoundedInputField(
               hintText: "Your Name",
@@ -72,25 +72,35 @@ class Body extends StatelessWidget {
               },
             ),
             
+          /*
+            Commented because I'm thinking if I implement using .svg or not.
+
             OrDivider(),
             
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                
                 SocalIcon(
                   iconSrc: "assets/icons/facebook.svg",
                   press: () {},
                 ),
+                
                 SocalIcon(
                   iconSrc: "assets/icons/twitter.svg",
                   press: () {},
                 ),
+                
                 SocalIcon(
                   iconSrc: "assets/icons/google-plus.svg",
                   press: () {},
                 ),
               ],
-            )
+            ),
+            SizedBox(height: size.height * 0.03),
+
+          */
+
           ],
         ),
       ),
