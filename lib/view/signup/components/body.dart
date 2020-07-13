@@ -1,5 +1,7 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:JprogramApp/view/login/login.dart';
 import 'package:JprogramApp/view/signup/components/background.dart';
@@ -53,7 +55,52 @@ class Body extends StatelessWidget {
             
             RoundedButton(
               text: "SIGNUP",
-              press: () {},
+              
+              press: () {
+
+                showDialog(
+                  context: context,
+                  
+                  child:  CupertinoAlertDialog(
+                    
+                    title: Text("Do you confirm?"),
+                    
+                    actions: <Widget>[
+                      
+                      CupertinoDialogAction(
+                          
+                          textStyle: TextStyle(color: Colors.red),
+                          isDefaultAction: true,
+
+                          onPressed: (){
+                            Navigator.pop(context);
+                          },
+                          child: Text("NO")
+                      ),
+                      
+                      CupertinoDialogAction(
+                        
+                        isDefaultAction: true,
+                          
+                          onPressed: () async {
+                            
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return LoginScreen();
+                                },
+                              ),
+                            );
+                          },
+                          child: Text("YES")
+                      ),
+                    ],
+                  )
+                );                
+
+
+              },
             ),
             
             SizedBox(height: size.height * 0.03),
