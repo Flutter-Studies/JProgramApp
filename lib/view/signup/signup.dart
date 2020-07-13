@@ -11,14 +11,14 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold( 
       
       backgroundColor: Colors.white,
-      appBar: buildAppBar(),
+      appBar: buildAppBar(context),
       body: Body() 
       
     );
 
   }
 
-  AppBar buildAppBar() {
+  AppBar buildAppBar(BuildContext context) {
     
     return AppBar(
       
@@ -32,7 +32,9 @@ class SignUpScreen extends StatelessWidget {
           color: Colors.black,
         ),
         
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
       
       centerTitle: true,
